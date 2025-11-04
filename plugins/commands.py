@@ -27,7 +27,7 @@ async def start(client, message):
             InlineKeyboardButton('𝐀𝐝𝐝 𝐌𝐞 𝐓𝐨 𝐘𝐨𝐮𝐫 𝐆𝐫𝐨𝐮𝐩', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ],[
             InlineKeyboardButton('𝐌𝐨𝐯𝐢𝐞𝐬 𝐆𝐫𝐨𝐮𝐩', url=M_GRP_LINK),
-            InlineKeyboardButton('𝐂𝐡𝐚𝐧𝐧𝐞𝐥', url=CHNL_LNK)
+            InlineKeyboardButton('𝐂𝐡𝐚𝐧𝐧𝐞𝐥', url=MAIN_CHANNEL)
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -52,7 +52,7 @@ async def start(client, message):
             InlineKeyboardButton('💠 ʜᴇʟᴘ 💠', callback_data='help'),
             InlineKeyboardButton('♻️ ᴀʙᴏᴜᴛ ♻️', callback_data='about')
             ],[
-            InlineKeyboardButton('🗲ʙᴏᴛ ᴜᴘᴅᴀᴛᴇꜱ🗲', url=CHNL_LNK)
+            InlineKeyboardButton('🗲ʙᴏᴛ ᴜᴘᴅᴀᴛᴇꜱ🗲', url=MAIN_CHANNEL)
         ]] 
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -100,7 +100,7 @@ async def start(client, message):
             InlineKeyboardButton('💠 ʜᴇʟᴘ 💠', callback_data='help'),
             InlineKeyboardButton('♻️ ᴀʙᴏᴜᴛ ♻️', callback_data='about')
             ],[
-            InlineKeyboardButton('🗲ʙᴏᴛ ᴜᴘᴅᴀᴛᴇꜱ🗲', url=CHNL_LNK)
+            InlineKeyboardButton('🗲ʙᴏᴛ ᴜᴘᴅᴀᴛᴇꜱ🗲', url=MAIN_CHANNEL)
         ]] 
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
