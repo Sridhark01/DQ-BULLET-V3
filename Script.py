@@ -148,7 +148,12 @@ Bᴏᴛ Rᴇsᴛᴀʀᴛᴇᴅ !
 ⏰ Tɪᴍᴇ : <code>{}</code>
 🌐 Tɪᴍᴇᴢᴏɴᴇ : <code>Asia/Kolkata</code></b>"""
 
+    OWNER_INFO = """
+<b>⍟───[ ᴏᴡɴᴇʀ ᴅᴇᴛᴀɪʟꜱ ]───⍟</b>
     
+<b>• ꜰᴜʟʟ ɴᴀᴍᴇ : sridhar</b> 
+<b>• ᴜꜱᴇʀɴᴀᴍᴇ : @maharaja_91</b>
+"""    
     CHANNEL_CAP = """
 <b>Hai 👋 {}</b> 😍
 
