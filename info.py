@@ -70,6 +70,7 @@ auth_users = [int(user) if id_pattern.search(user) else user for user in environ
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 GRP_LNK = environ.get('GRP_LNK', 'https://t.me/+DIFevVBulGYzYzk1')
 CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/+DIFevVBulGYzYzk1')
+M_GRP_LINK environ.get('M_GRP_LINK', 'https://t.me/+DIFevVBulGYzYzk1')
 auth_channel = environ.get('AUTH_CHANNEL')
 auth_grp = environ.get('AUTH_GROUP')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
