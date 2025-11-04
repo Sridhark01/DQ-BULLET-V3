@@ -138,6 +138,17 @@ Name - {}
                        
 <b>⚙️ Fɪʟᴇ Sɪᴢᴇ</b> : <b>{}</b>
 """
+
+    RESTART_TXT = """
+<b>Every New End is a New Begining.
+
+Bᴏᴛ Rᴇsᴛᴀʀᴛᴇᴅ !
+
+📅 Dᴀᴛᴇ : <code>{}</code>
+⏰ Tɪᴍᴇ : <code>{}</code>
+🌐 Tɪᴍᴇᴢᴏɴᴇ : <code>Asia/Kolkata</code></b>"""
+
+    
     CHANNEL_CAP = """
 <b>Hai 👋 {}</b> 😍
 
