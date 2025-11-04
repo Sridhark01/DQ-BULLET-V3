@@ -266,8 +266,23 @@ async def select_language(bot, query):
     except MessageNotModified:
         pass
     await query.answer()
+    
 
+@Client.on_message(filters.private & filters.text & filters.incoming)
+async def pm_text(bot, message):
+    content = message.text
+    user = message.from_user.first_name
+    user_id = message.from_user.id
+    if content.startswith("/") or content.startswith("#"): return  # ignore commands and hashtags
+    if user_id in ADMINS: return # ignore admins
+    await message.reply_text(
+         text="<b>ʜᴇʏ ᴅᴜᴅᴇ 😍 ,\n\nʏᴏᴜ ᴄᴀɴ'ᴛ ɢᴇᴛ ᴍᴏᴠɪᴇs ꜰʀᴏᴍ ʜᴇʀᴇ. ʀᴇǫᴜᴇsᴛ ᴏɴ ᴏᴜʀ <a href=M_GRP_LINK>ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ</a> ᴏʀ ᴄʟɪᴄᴋ ʀᴇǫᴜᴇsᴛ ʜᴇʀᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ​👇</b>",   
+         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📝 ʀᴇǫᴜᴇsᴛ ʜᴇʀᴇ​ ", url=M_GRP_LINK)]]))
+    await bot.send_message(
+        chat_id=PM_TEXTS,
+        text=f"<b>👻 𝐏𝐌_𝐌𝐒𝐆 👻\n\n📝ᴍᴇssᴀɢᴇ​:-{content}\n\n👶🏻ʀᴇQᴜᴇꜱᴛᴇᴅ ʙʏ:-{user}\n\n🃏ᴜꜱᴇʀ ɪᴅ:-<code>{user_id}</code></b>"
 
+        
 @Client.on_callback_query()
 async def cb_handler(client: Client, query: CallbackQuery):
     if query.data == "close_data":
@@ -578,7 +593,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
-        await query.answer('Piracy Is Crime')
     elif query.data == "help":
         buttons = [[
             InlineKeyboardButton('Mᴀɴᴜᴀʟ FIʟᴛᴇʀ', callback_data='manuelfilter'),
