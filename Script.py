@@ -15,7 +15,7 @@ Hᴇʏ {}
 
 # ⚠️ Please don't change our source code 👇🏻
 
-    ABOUT_TXT = """<<b>
+    ABOUT_TXT = """<b>
  🤖 ᴍʏ ɴᴀᴍᴇ : {}
  👨‍💻 ᴄʀᴇᴀᴛᴏʀ : <a href='https://t.me/maharaja_91'>ʀᴀᴊᴀ ᠰ TɢX</a>
  📚 ʟɪʙʀᴀʀʏ : <a href='https://docs.pyrogram.org/'>ᴘʏʀᴏɢʀᴀᴍ</a>
