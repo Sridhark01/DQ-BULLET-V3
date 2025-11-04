@@ -85,7 +85,7 @@ auth_channel = environ.get('AUTH_CHANNEL')
 auth_grp = environ.get('AUTH_GROUP')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
-
+PM_TEXTS = int(environ.get('PM_TEXTS', '-1001924870738'))
 # Command
 COMMAND_HAND_LER = environ.get("COMMAND_HAND_LER", "/")
 
