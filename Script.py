@@ -194,12 +194,6 @@ Bᴏᴛ Rᴇsᴛᴀʀᴛᴇᴅ !
 ▫️<a href=https://t.me/wudixh14> Kuttu Bot Update </a>
 ╚════ ᴊᴏɪɴ ᴡɪᴛʜ ᴜs ════╝</blockquote></b>""" 
 
-    RESTART_TXT = """
-    Kuttu Bot 2 ✅
-<b>Bᴏᴛ Rᴇsᴛᴀʀᴛᴇᴅ !
-📅 Dᴀᴛᴇ : <code>{}</code>
-⏰Tɪᴍᴇ : <code>{}</code>
-🌐 Tɪᴍᴇᴢᴏɴᴇ : <code>Asia/Kolkata</code></b>"""
 
     MELCOW_ENG = """<b>Hᴇʟʟᴏ {} 😍, Aɴᴅ Wᴇʟᴄᴏᴍᴇ Tᴏ {} Gʀᴏᴜᴘ ❤️</b>"""
 
