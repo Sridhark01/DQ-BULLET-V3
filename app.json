@@ -16,8 +16,8 @@
       "index",
       "inline"
     ],
-    "website": "https://github.com/GouthamSER/TelegramBot",
-    "repository": "https://github.com/GouthamSER/TelegramBot",
+    "website": "https://github.com/Sridhark01/DQ-BULLET-V3",
+    "repository": "https://github.com/Sridhark01/DQ-BULLET-V3",
     "env": {
         "BOT_TOKEN": {
             "description": "Your bot token.",
