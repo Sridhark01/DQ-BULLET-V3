@@ -76,7 +76,7 @@ async def give_filter(client, message):
             if manual == False:
                 settings = await get_settings(message.chat.id)
                 try:
-                    if settings['auto_ffilter']:
+                    if settings['auto_filter']:
                         await auto_filter(client, message)
                     else:
                         k = await message.reply_text(
