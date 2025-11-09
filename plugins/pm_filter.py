@@ -28,7 +28,7 @@ SPELL_CHECK = {}
 BOT_START_TIME = time.time()
 
 
-@Client.on_message(filters.group | '''filters.private &''' filters.text & filters.incoming) #GIVE FILTER IN PM BRO IDEA OF GOUTHAM SER
+@Client.on_message(filters.group | filters.text & filters.incoming) #GIVE FILTER IN PM BRO IDEA OF GOUTHAM SER
 async def give_filter(client, message):
     k = await manual_filters(client, message)
     if k == False:
