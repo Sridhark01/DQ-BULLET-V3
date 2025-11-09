@@ -39,7 +39,7 @@ async def give_filter(client, message):
 async def give_filter(client, message):
     userid = message.from_user.id
     content = message.reply_to_message
-#    content = message.text                                  
+    # content = message.text                                  
     if AUTH_CHANNEL and not await mute_login(client, message):
         try:
             invite_link = await client.create_chat_invite_link(int(AUTH_CHANNEL))          
@@ -66,8 +66,11 @@ async def give_filter(client, message):
         except:
             pass
         return
+    
+    # 🚫 FIXED: Removed infinite recursion
     if message.chat.id != SUPPORT_CHAT_ID:
-        glob = await give_filter(client, message)
+        glob = False  # previously: await give_filter(client, message)
+
         if glob == False:
             manual = await manual_filters(client, message)
             if manual == False:
@@ -76,7 +79,9 @@ async def give_filter(client, message):
                     if settings['auto_ffilter']:
                         await auto_filter(client, message)
                     else:
-                        k = await message.reply_text(f"𝐇𝐞𝐥𝐥𝐨 {message.from_user.mention},\n\n{content} 𝐀𝐯𝐚𝐢𝐥𝐚𝐛𝐥𝐞..!! \n\n❌️𝐀𝐮𝐭𝐨 𝐅𝐢𝐥𝐭𝐞𝐫 𝐎𝐟𝐟..!!!❌️ \n𝐏𝐥𝐞𝐚𝐬𝐞 𝐖𝐚𝐢𝐭..")
+                        k = await message.reply_text(
+                            f"𝐇𝐞𝐥𝐥𝐨 {message.from_user.mention},\n\n{content} 𝐀𝐯𝐚𝐢𝐥𝐚𝐛𝐥𝐞..!! \n\n❌️𝐀𝐮𝐭𝐨 𝐅𝐢𝐥𝐭𝐞𝐫 𝐎𝐟𝐟..!!!❌️ \n𝐏𝐥𝐞𝐚𝐬𝐞 𝐖𝐚𝐢𝐭.."
+                        )
                         await asyncio.sleep(5)
                         await k.delete()
                 except KeyError:
@@ -87,16 +92,17 @@ async def give_filter(client, message):
                         await auto_filter(client, message)
                 else:
                     buttons = [[                    
-                    InlineKeyboardButton("⚠️ 𝐃𝐞𝐥𝐞𝐭𝐞 ⚠️", callback_data="check_delete")
+                        InlineKeyboardButton("⚠️ 𝐃𝐞𝐥𝐞𝐭𝐞 ⚠️", callback_data="check_delete")
                     ]]
                     reply_markup = InlineKeyboardMarkup(buttons)
-                    k = await message.reply_text(f"𝐔𝐬𝐞𝐫 𝐍𝐚𝐦𝐞: {message.from_user.mention} \n𝐔𝐬𝐞𝐫 𝐈𝐝:{userid} \n𝐂𝐨𝐧𝐭𝐞𝐧𝐭: {content} \n𝐋𝐚𝐬𝐭 𝐖𝐚𝐫𝐧𝐢𝐧𝐠...⚠️",
-                    reply_markup=reply_markup,
-                    parse_mode=enums.ParseMode.HTML)
+                    k = await message.reply_text(
+                        f"𝐔𝐬𝐞𝐫 𝐍𝐚𝐦𝐞: {message.from_user.mention}\n𝐔𝐬𝐞𝐫 𝐈𝐝:{userid}\n𝐂𝐨𝐧𝐭𝐞𝐧𝐭: {content}\n𝐋𝐚𝐬𝐭 𝐖𝐚𝐫𝐧𝐢𝐧𝐠...⚠️",
+                        reply_markup=reply_markup,
+                        parse_mode=enums.ParseMode.HTML
+                    )
                     await asyncio.sleep(5)
-                    await k.delete()  
+                    await k.delete()
                     await message.delete()
-
 
 @Client.on_callback_query(filters.regex(r"^next"))
 async def next_page(bot, query):
