@@ -203,6 +203,8 @@ Bᴏᴛ Rᴇsᴛᴀʀᴛᴇᴅ !
 
     MVE_NT_FND = """<b>Tʜɪs Mᴏᴠɪᴇ Is Nᴏᴛ Yᴇᴛ Rᴇᴀʟᴇsᴇᴅ Oʀ Aᴅᴅᴇᴅ Tᴏ DB</b> """
 
+    SPOLL_NOT_FND = """movie not found"""
+
     NORSLTS = """★ #𝗡𝗼𝗥𝗲𝘀𝘂𝗹𝘁𝘀 ★
 𝗜𝗗 <b>: {}</b>
 𝗡𝗮𝗺𝗲 <b>: {}</b>
