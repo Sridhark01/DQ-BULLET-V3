@@ -93,7 +93,7 @@ COMMAND_HAND_LER = environ.get("COMMAND_HAND_LER", "/")
 # MongoDB information
 DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://sri:sri@cluster0.twm8vnp.mongodb.net/?retryWrites=true&w=majority")
 DATABASE_NAME = environ.get('DATABASE_NAME', "cluster0")
-COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
+COLLECTION_NAME = environ.get('COLLECTION_NAME', 'files')
 MONGO_URL = os.environ.get('MONGO_URL', "mongodb+srv://sri:sri@cluster0.twm8vnp.mongodb.net/?retryWrites=true&w=majority")
 
 
